@@ -1,0 +1,181 @@
+Rebooted style *,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0 solid transparent;
+    transition: all 0.4s ease;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    scrollbar-width: thin; /* Options: auto, thin, none */
+    scrollbar-color: #0f4a6c #e0e0e0; /* Thumb color, Track color */
+    scroll-behavior: smooth;
+}
+
+body {
+    text-rendering: optimizeSpeed;
+    margin: 0;
+    padding: 0;
+}
+
+.scaleAnim:hover {
+    transform: scale(1.05);
+}
+
+.scaleAnim:active {
+    transform: scale(1);
+}
+
+.weakScaleAnim:hover{
+    transform: scale(1.005);
+}
+
+.weakScaleAnim:active{
+    transform: scale(1);
+}
+
+.shadowAnim{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.shadowAnim:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.textAnim:hover {
+    color: #f0f0f0;
+}
+
+.textAnim:active {
+    color: #e0e0e0;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    line-height: inherit;
+    color: inherit;
+    display: block;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+button,
+[role="button"] {
+    cursor: pointer;
+    background-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+a {
+    cursor: pointer;
+    color: inherit;
+    text-decoration: inherit;
+    -webkit-tap-highlight-color: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+[type="date"],
+[type="datetime"],
+[type="datetime-local"],
+[type="email"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="search"],
+[type="tel"],
+[type="text"],
+[type="time"],
+[type="url"],
+[type="week"],
+textarea,
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+::-moz-placeholder {
+    opacity: 1;
+}
+
+textarea {
+    vertical-align: top;
+}
+
+[type="checkbox"],
+[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+.container{
+    max-width: 1300px;
+    margin: 0 auto;
+}
